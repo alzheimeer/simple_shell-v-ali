@@ -1,0 +1,118 @@
+.TH HSH 1 "August 2020" Version(0.1) "SIMPLE SHELL MAN PAGE"
+.SH NAME
+.PP
+.B hsh - Simple Shell
+.PP
+.SH SYNOPSIS
+.PP
+.B ./hsh [command] [options]
+.PP
+.SH DESCRIPTION
+.PP
+.B The hsh (Simple Shell) is an end of semester project for students at Holberton School where we expore, understand and build a working functional simple shell program.
+.PP
+.B Overview
+.PP
+The simple shell is a simplified iteration of a command line interpreter, similar to
+.B bash or dash.
+.I FORMAT [ARGUMENT]...
+.PP
+.SH OPTIONS
+.PP
+.B Simple Shell operates in both
+.I interactive and
+.I non-interactive mode. The user may initiate
+.B simple shell and begin working or initate
+.B simple shell using commands meant to be run by the program.
+.PP
+.SH ARGUMENTS
+.PP
+The first argument, argument 0 is understood to be the command to be run by
+.B simple shell
+and arguments following as modifiers or options.
+.SH INVOCATION
+.B simple shell
+may be invoked with the same functionality in
+.I interactive
+or
+.I non-interactive
+mode.  The user may quit the program by typing "exit", "Ctrl + D", or "Ctrl + C" on the command line.
+When the program quits or a command has been executed,
+.B simple shell
+returns with a new prompt: "WORK$ "
+
+.B Example
+.IP
+
+$./hsh
+
+$pwd
+
+/home/vagrant/simple_shell
+
+$
+
+$/bin/pwd
+
+/home/vagrant/simple_shell
+
+$
+
+.SH RESERVED WORDS
+.B exit:
+quits the program, exits the shell.
+
+.B env:
+prints the environment variables
+
+.SH HISTORY
+The
+.B history
+built-in displays the history list, one command per line, preceded with line numbers, starting with 0. On exit the entire history is written to a file named
+.I simple_shell_history
+in the
+.I $HOME
+directory.
+.SH SHELL BUILTIN COMMANDS
+The commands
+.B exit
+and
+.B env
+are handled automatically by
+.B simple shell
+.PP
+.SH FILES
+.PP
+.I simple_shell.h
+- Header file, contains the prototypes of the functions used and the libraries.
+.PP
+.I main_shell.c
+- Contains the main function and the signal handler function.
+.PP
+.I read_tokenize.c
+- Contains the line reader entered by the stdin and the tokenizer.
+.PP
+.I compare_execute.c
+- Contains the main function.
+.PP
+.I builtin_functions.c
+- Contains the main function.
+.PP
+.I auxiliar_functions.c
+- Contains the main function.
+.PP
+.I control_errors.c
+- Contains the main function.
+.PP
+.SH BUGS
+.PP
+.B Simple Shell:
+.PP
+https://github.com/AlisonQuinter17/simple_shell
+.PP
+.SH AUTHORS
+Written by:
+.PP
+-Alison Quintero.
+.PP
+-Valeria Trujillo.
